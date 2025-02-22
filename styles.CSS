@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #16213e);
     color: #ffffff;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
@@ -15,9 +15,9 @@ body {
     to { opacity: 1; }
 }
 
-/* Header with 3D Shadow */
+/* Header with Soft Glow */
 header {
-    background: linear-gradient(135deg, #000428, #004e92);
+    background: linear-gradient(135deg, #0f3460, #14537e);
     color: #ffffff;
     padding: 25px 0;
     text-align: center;
@@ -25,15 +25,15 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+    box-shadow: 0px 5px 25px rgba(0, 255, 127, 0.5);
 }
 
-/* Navigation Bar with Glassmorphism */
+/* Navigation Bar */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     padding: 15px;
     border-radius: 12px;
@@ -46,39 +46,42 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fcfdff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    transition: color 0.3s, transform 0.3s ease-in-out;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffd700;
-    transform: scale(1.15);
+    color: #00ff7f;
+    text-shadow: 0px 0px 15px #00ff7f;
 }
 
-/* Sections with 3D Effect */
+/* Sections with Glass & Gradient Effect */
 section {
     padding: 40px;
     max-width: 900px;
     margin: 30px auto;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(20, 20, 20, 0.6);
     border-radius: 12px;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 25px rgba(0, 255, 127, 0.3);
     backdrop-filter: blur(12px);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(45deg, #00ff7f, #00e1ff) 1;
 }
 
 section:hover {
     transform: scale(1.05);
-    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 10px 30px rgba(0, 255, 127, 0.5);
 }
 
 /* Section Titles */
 h2 {
-    color: #ffffff;
-    border-bottom: 4px solid #ffd700;
+    color: #00e1ff;
+    border-bottom: 4px solid #00ff7f;
     padding-bottom: 12px;
     display: inline-block;
     font-size: 32px;
@@ -95,26 +98,46 @@ ul {
 footer {
     text-align: center;
     padding: 25px;
-    background: linear-gradient(135deg, #000428, #004e92);
+    background: linear-gradient(135deg, #0f3460, #14537e);
     color: white;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
+    box-shadow: 0px -5px 25px rgba(0, 255, 127, 0.5);
 }
 
-/* Profile Image with 3D Effect */
+/* Profile Image with Neon Border */
 img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     display: block;
     margin: 20px auto;
-    border: 5px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease-in-out;
+    border: 5px solid rgba(0, 255, 127, 0.7);
+    box-shadow: 0px 8px 25px rgba(0, 255, 127, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 img:hover {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 12px 30px rgba(0, 255, 127, 0.7);
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(135deg, #00ff7f, #00e1ff);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 255, 127, 0.7);
 }
